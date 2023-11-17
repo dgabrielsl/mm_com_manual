@@ -184,6 +184,7 @@ def com_pullrequest(stack_inputs, push):
 
         global r_document, r_id, r_name, r_lname
         r_document = _page[4]
+        r_document = r_document.replace(' ','')
         r_fname = f'{_page[7]} {_page[8]}'.replace('\n','')
         r_fname = r_fname.split(';')
         r_fname = r_fname.pop()

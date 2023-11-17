@@ -167,7 +167,8 @@ def returndata(stack_inputs):
         kycdated = _content[3]
         kycdated = kycdated.split(' ')
         kycdated = kycdated[8:10]
-        kycdated[1] = kycdated[1].replace('\xa0', '').replace('Código', '')
+        try: kycdated[1] = kycdated[1].replace('\xa0', '').replace('Código', '')
+        except: pass
         switch(kycdated)
         kycdated = f'{kycdated[0]}-{kycdated[1]}'
         for f in _content:
